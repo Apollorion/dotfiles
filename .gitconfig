@@ -1,0 +1,24 @@
+[user]
+	signingkey = 0x1E1A26A027CC4A94
+    name = apollorion
+    email = joey@apollorion.com
+[commit]
+    gpgsign = true
+[gpg]
+    program = /usr/local/bin/gpg
+[pull]
+    rebase = true
+[format]
+    pretty = \\%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s'
+[core]
+    editor = vim
+[merge]
+    tool = intellij
+[mergetool "intellij"]
+    cmd = /Applications/IntelliJ\\ IDEA.app/Contents/MacOS/idea merge $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") $(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") $(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
+    trustExitCode = true
+[diff]
+    tool = intellij
+[difftool "intellij"]
+    cmd = /Applications/IntelliJ\\ IDEA.app/Contents/MacOS/idea diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
+
