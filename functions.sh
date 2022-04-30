@@ -3,10 +3,6 @@ gitclean() {
     echo "gitclean complete!"
 }
 
-changeNamespace(){
-    kubectl config set-context --current --namespace=$1
-}
-
 changeProfile(){
     export AWS_PROFILE=$1
     aws sts get-caller-identity
@@ -51,62 +47,6 @@ killTmux(){
   else
     tmux kill-session
   fi
-}
-
-plutoAll() {
-  resources="deployment,ingress,svc,pod,rc,hpa,job,cronjob,daemonset,statefulset,replicaset,secret,configmap,pvc,pv,persistentvolumeclaim,persistentvolume,storageclass,clusterrole,clusterrolebinding,role,rolebinding,serviceaccount,networkpolicy,persistentvolumeclaim,persistentvolume,storageclass,clusterrole,clusterrolebinding,role,rolebinding,serviceaccount,networkpolicy"
-
-  if [[ "$1" != "" ]]; then
-        echo "Checking against k8s $1"
-    else
-        echo "Checking against default pluto k8s version"
-    fi
-  for ns in $(kubectl get namespaces -o name | cut -d/ -f2); do
-    echo "=========================================================="
-    echo "Namespace: $ns"
-    echo ""
-    echo "Helm"
-    if [[ "$1" != "" ]]; then
-      pluto -n $ns detect-helm --target-versions k8s=$1 -o wide
-    else
-      pluto -n $ns detect-helm --target-versions -o wide
-    fi
-
-    echo ""
-    echo "Other Resources"
-    if [[ "$1" != "" ]]; then
-      k get -n $ns $resources -o yaml | pluto detect --target-versions k8s=$1 -o wide -
-    else
-      k get -n $ns $resources -o yaml | pluto detect --target-versions -o wide -
-    fi
-
-  done
-}
-
-
-function awssession
-{
-    unset AWS_SESSION_TOKEN
-    unset AWS_ACCESS_KEY_ID
-    unset AWS_SECRET_ACCESS_KEY
-    output=`aws sts get-session-token \
-      --serial-number arn:aws:iam::887744313716:mfa/{{ mac_username }}@updater.com \
-      --token-code $1 \
-      --duration-seconds 43200`
-    secret=`echo $output | jq '.Credentials.SecretAccessKey'`
-    secret="${secret%\"}"
-    secret="${secret#\"}"
-    access=`echo $output | jq '.Credentials.AccessKeyId'`
-    access="${access%\"}"
-    access="${access#\"}"
-    sessionToken=`echo $output | jq '.Credentials.SessionToken'`
-    sessionToken="${sessionToken%\"}"
-    sessionToken="${sessionToken#\"}"
-    export AWS_SESSION_TOKEN=$sessionToken
-    export AWS_ACCESS_KEY_ID=$access
-    export AWS_SECRET_ACCESS_KEY=$secret
-    echo "Session Token Expires at:"
-    echo $output | jq '.Credentials.Expiration'
 }
 
 wrap(){
