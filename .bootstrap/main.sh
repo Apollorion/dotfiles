@@ -37,8 +37,8 @@ asdf install yarn latest
 npm install --global expo-cli
 
 # OSX defaults
-defaults write com.apple.dock tilesize -float 36 # Sets dock size
-defaults write com.apple.dock show-recents -bool false # Disable recents in the dock
-defaults com.apple.AppleMultitouchTrackpad TrackpadCornerSecondaryClick -integer 2 # Right click with bottom right corner of trackpad
-defaults -g com.apple.swipescrolldirection -bool false # Disable natural scroll direction
-defaults -g com.apple.mouse.scaling -float 20.0 # Speed up the mouse
+defaults -currentHost write com.apple.dock tilesize -float 36 # Sets dock size
+defaults -currentHost write com.apple.dock show-recents -bool false # Disable recents in the dock
+defaults -currentHost write com.apple.AppleMultitouchTrackpad TrackpadCornerSecondaryClick -int 2 # Right click with bottom right corner of trackpad
+defaults -currentHost write -g com.apple.swipescrolldirection -bool false # Disable natural scroll direction
+defaults -currentHost write -g com.apple.mouse.scaling -float 20.0 # Speed up the mouse
