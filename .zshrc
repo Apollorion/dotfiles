@@ -11,7 +11,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 ZSH_DISABLE_COMPFIX=true
 export TERM="xterm-256color"
-export ZSH="~/.oh-my-zsh"
+export ZSH="/Users/$(whoami)/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
