@@ -11,7 +11,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 ZSH_DISABLE_COMPFIX=true
 export TERM="xterm-256color"
-export ZSH="/Users/apollorion/.oh-my-zsh"
+export ZSH="~/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
@@ -49,7 +49,7 @@ alias cat="bat --style=plain"
 alias grep="rg"
 
 # Personal Stuff
-source /Users/apollorion/functions.sh
+source ~/functions.sh
 test -f ~/secrets.sh && source ~/secrets.sh
 export AWS_PAGER=""
 
