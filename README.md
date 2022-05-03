@@ -9,3 +9,9 @@
 5. Unencrypt encrypted files `yadm decrypt`
 6. If not asked, run bootstrap `yadm bootstrap`
 
+
+## Notes
+
+If you have trouble with SSH/GPG, try the following:
+- run `gpgfix` this will run a command that will force your yubikey to, basically, restart
+- run `gpg --card-status` not sure why but this fixes problems sometimes

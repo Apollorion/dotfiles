@@ -43,3 +43,7 @@ defaults -currentHost write com.apple.dock show-recents -bool false # Disable re
 defaults -currentHost write com.apple.AppleMultitouchTrackpad TrackpadCornerSecondaryClick -int 2 # Right click with bottom right corner of trackpad
 defaults -currentHost write -g com.apple.swipescrolldirection -bool false # Disable natural scroll direction
 defaults -currentHost write -g com.apple.mouse.scaling -float 20.0 # Speed up the mouse
+
+# GPG Things
+launchctl load gnupg.gpg-agent.plist
+launchctl load gnupg.gpg-agent-symlink.plist

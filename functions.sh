@@ -66,6 +66,10 @@ gitfreak(){
   git symbolic-ref refs/heads/main refs/heads/master
 }
 
+gpgfix(){
+  gpg-connect-agent updatestartuptty /bye
+}
+
 # Defaults
 export AWS_DEFAULT_REGION="us-east-1"
 export AWS_PROFILE="default"
