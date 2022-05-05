@@ -67,7 +67,10 @@ gitfreak(){
 }
 
 gpgfix(){
+  gpgconf --kill gpg-agent
+  gpgconf --launch gpg-agent
   gpg-connect-agent updatestartuptty /bye
+  gpg --card-status
 }
 
 # Defaults

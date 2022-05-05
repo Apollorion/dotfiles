@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # github token
-export GH_TOKEN=""
+export GITHUB_TOKEN=""
 
 # dockerhub
 export DOCKERHUB_USERNAME=""
