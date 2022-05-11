@@ -33,6 +33,8 @@ brew "tmux"
 brew "wget"
 brew "yadm"
 brew "yarn"
+brew "zsh-syntax-highlighting"
+
 brew "fluxcd/tap/flux"
 brew "jwbargsten/misc/defbro"
 brew "norwoodj/tap/helm-docs"
