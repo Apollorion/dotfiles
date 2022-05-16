@@ -57,8 +57,8 @@ cask "parallels"
 cask "postman"
 cask "sequel-ace"
 cask "sublime-text"
+cask "1password"
 
-mas "1Password 7", id: 1333542190
 mas "Amphetamine", id: 937984704
 mas "Paste", id: 967805235
 mas "Slack", id: 803453959
