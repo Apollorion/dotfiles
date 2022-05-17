@@ -3,7 +3,6 @@
 # GPG and SSH config
 export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-gpgconf --launch gpg-agent
 
 # OHMYZSH and POWERLEVEL10K Config
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -52,5 +51,9 @@ alias grep="rg"
 source ~/functions.sh
 test -f ~/secrets.sh && source ~/secrets.sh
 export AWS_PAGER=""
+
+# run after function.sh is loaded
+# make sure I dont have to do this a ton
+gpgfix > /dev/null 2>&1
 
 source <(kubectl completion zsh)
