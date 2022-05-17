@@ -43,7 +43,7 @@ function moveWindowToDisplay(d)
 end
 
 hs.hotkey.bind(hyper, "1", moveWindowToDisplay(1))
-hs.hotkey.bind(hyper, "2", moveWindowToDisplay(3))
-hs.hotkey.bind(hyper, "3", moveWindowToDisplay(2))
+hs.hotkey.bind(hyper, "2", moveWindowToDisplay(2))
+hs.hotkey.bind(hyper, "3", moveWindowToDisplay(3))
 
 hs.notify.new({title='Hammerspoon', informativeText='Everything is 🍑'}):send()
