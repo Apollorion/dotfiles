@@ -43,7 +43,6 @@ brew "jwbargsten/misc/defbro"
 brew "norwoodj/tap/helm-docs"
 brew "romkatv/powerlevel10k/powerlevel10k"
 
-cask "1password-cli"
 cask "alfred"
 cask "camo-studio"
 cask "discord"
@@ -52,17 +51,14 @@ cask "google-chrome"
 cask "hammerspoon"
 cask "intellij-idea"
 cask "iterm2"
-cask "kaleidoscope"
 cask "karabiner-elements"
 cask "ngrok"
-cask "parallels"
 cask "postman"
 cask "sequel-ace"
 cask "sublime-text"
 cask "1password"
 
 mas "Amphetamine", id: 937984704
-mas "Paste", id: 967805235
 mas "Slack", id: 803453959
 mas "The Unarchiver", id: 425424353
 mas "Xcode", id: 497799835
