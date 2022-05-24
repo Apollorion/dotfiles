@@ -52,6 +52,8 @@ source ~/functions.sh
 test -f ~/secrets.sh && source ~/secrets.sh
 export AWS_PAGER=""
 
+export GOPATH=~/go
+
 # run after function.sh is loaded
 # make sure I dont have to do this a ton
 gpgfix > /dev/null 2>&1
