@@ -73,6 +73,10 @@ gpgfix(){
   gpg --card-status
 }
 
+count(){
+  wc -l | xargs
+}
+
 # Defaults
 export AWS_DEFAULT_REGION="us-east-1"
 export AWS_PROFILE="default"
