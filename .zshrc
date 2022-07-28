@@ -46,6 +46,7 @@ alias ll="ls -lah"
 alias k="kubectl"
 alias cat="bat --style=plain"
 alias grep="rg"
+alias kunhealthy="kubectl get -o wide pods -A | grep -v \"Completed|1/1|2/2|3/3|4/4|5/5|6/6|7/7\""
 
 # Personal Stuff
 source ~/functions.sh

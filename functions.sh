@@ -77,6 +77,18 @@ count(){
   wc -l | xargs
 }
 
+gitDeleteOldFiles(){
+  date=$1
+
+  for item in $(git ls-files); do
+    result=$(git --no-pager log --since "$date" -- $item)
+    if [[ "$result" == "" ]]; then
+      echo $item
+      rm $item
+    fi
+  done
+}
+
 # Defaults
 export AWS_DEFAULT_REGION="us-east-1"
 export AWS_PROFILE="default"
