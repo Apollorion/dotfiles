@@ -8,10 +8,8 @@ gitDiff = gitDiff.split("\n");
 // Remove last element if its an empty string
 const index = gitDiff.indexOf(gitDiff.length - 1);
 if (index > -1 && gitDiff[index] == "") {
-  array.splice(index, 1);
+  gitDiff.splice(index, 1);
 }
-
-
 
 module.exports = {
     types: [
