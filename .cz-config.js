@@ -5,11 +5,29 @@ let gitDiff = execSync('git diff --name-only --cached', {
 });
 gitDiff = gitDiff.split("\n");
 
-// Remove last element if its an empty string
-const index = gitDiff.indexOf(gitDiff.length - 1);
-if (index > -1 && gitDiff[index] == "") {
-  gitDiff.splice(index, 1);
+
+let diffs = [];
+for(let diff of gitDiff){
+    // Remove empty strings
+    if(diff == ""){
+        continue;
+    }
+
+    // Push full path to diffs
+    diffs.push(diff);
+
+    // push path without file to diffs
+    diff = diff.split("/")
+    index = diff.length - 1;
+    if (index > -1) {
+      diff.splice(index, 1);
+      let joined = diff.join("/");
+      if(!diffs.includes(joined)){
+        diffs.push(diff.join("/"))
+      }
+    }
 }
+diffs.sort()
 
 module.exports = {
     types: [
@@ -55,7 +73,7 @@ module.exports = {
         },
     ],
     skipQuestions: ["body", "breaking", "footer"],
-    scopes: gitDiff,
+    scopes: diffs,
     allowTicketNumber: false,
     allowCustomScopes: true,
 

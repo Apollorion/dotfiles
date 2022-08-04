@@ -52,8 +52,8 @@ alias kunhealthy="kubectl get -o wide pods -A | grep -v \"Completed|1/1|2/2|3/3|
 source ~/functions.sh
 test -f ~/secrets.sh && source ~/secrets.sh
 export AWS_PAGER=""
-
 export GOPATH=~/go
+export CDPATH=".:$HOME/updater:$HOME/projects:$HOME/personal"
 
 # run after function.sh is loaded
 # make sure I dont have to do this a ton
