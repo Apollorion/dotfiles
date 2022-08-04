@@ -89,6 +89,20 @@ gitDeleteOldFiles(){
   done
 }
 
+yadmUpdateRemote(){
+  cd ~
+  yadm commit -a -m "$1"
+  yadm push origin main
+  cd -
+}
+
+yadmFetchRemote(){
+  cd ~
+  yadm fetch
+  yadm pull
+  cd -
+}
+
 # Defaults
 export AWS_DEFAULT_REGION="us-east-1"
 export AWS_PROFILE="default"
