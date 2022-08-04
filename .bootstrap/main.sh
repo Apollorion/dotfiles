@@ -21,13 +21,15 @@ asdf plugin add kubectl
 asdf plugin add terraform
 asdf plugin add nodejs
 asdf plugin add yarn
+asdf plugin-add python
 
-asdf install awscli latest
-asdf install golang latest
-asdf install kubectl latest
-asdf install terraform latest
-asdf install nodejs latest
-asdf install yarn latest
+asdf install awscli 2.4.9
+asdf install golang 1.17.6
+asdf install kubectl 1.23.1
+asdf install terraform 1.1.7
+asdf install nodejs 16.13.2
+asdf install yarn 1.22.17
+asdf install python 3.10.5
 
 # NPM
 npm install --global expo-cli
