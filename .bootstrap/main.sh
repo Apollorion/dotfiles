@@ -47,3 +47,6 @@ defaults -currentHost write -g com.apple.mouse.scaling -float 20.0 # Speed up th
 # GPG Things
 launchctl load gnupg.gpg-agent.plist
 launchctl load gnupg.gpg-agent-symlink.plist
+
+npm install -g commitizen
+npm i cz-customizable -g
