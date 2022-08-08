@@ -41,7 +41,6 @@ SAVEHIST=1000000
 export GPG_TTY=$(tty)
 
 # Aliases
-alias git="hub"
 alias ll="ls -lah"
 alias k="kubectl"
 alias cat="bat --style=plain"

@@ -13,6 +13,8 @@ duti -s com.sublimetext.4 .md all
 duti -s com.sublimetext.4 .txt all
 duti -s com.sublimetext.4 .yaml all
 duti -s com.sublimetext.4 .yml all
+duti -s com.sublimetext.4 .sh all
+duti -s com.sublimetext.4 .js all
 
 # Install / configure asdf plugins
 asdf plugin add awscli
@@ -31,8 +33,11 @@ asdf install nodejs 16.13.2
 asdf install yarn 1.22.17
 asdf install python 3.10.5
 
+# If I ever change nodejs above, then I need to install 16.13.2 also and the next line must be uncommented for commitizen to work
+# asdf install nodejs 16.13.2
+
 # NPM
-npm install --global expo-cli
+npm install --global expo-cli commitizen cz-customizable
 
 # Copy secrets template if none exist
 if [ ! -f ~/secrets.sh ]; then
@@ -49,6 +54,3 @@ defaults -currentHost write -g com.apple.mouse.scaling -float 20.0 # Speed up th
 # GPG Things
 launchctl load gnupg.gpg-agent.plist
 launchctl load gnupg.gpg-agent-symlink.plist
-
-npm install -g commitizen
-npm i cz-customizable -g

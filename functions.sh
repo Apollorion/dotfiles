@@ -1,8 +1,3 @@
-gitclean() {
-    git branch --merged | egrep -v "(^\*|main|master)" | xargs git branch -d
-    echo "gitclean complete!"
-}
-
 changeProfile(){
     export AWS_PROFILE=$1
     aws sts get-caller-identity
@@ -62,10 +57,6 @@ wrap(){
   fi
 }
 
-gitfreak(){
-  git symbolic-ref refs/heads/main refs/heads/master
-}
-
 gpgfix(){
   gpgconf --kill gpg-agent
   gpgconf --launch gpg-agent
@@ -75,18 +66,6 @@ gpgfix(){
 
 count(){
   wc -l | xargs
-}
-
-gitDeleteOldFiles(){
-  date=$1
-
-  for item in $(git ls-files); do
-    result=$(git --no-pager log --since "$date" -- $item)
-    if [[ "$result" == "" ]]; then
-      echo $item
-      rm $item
-    fi
-  done
 }
 
 yadmUpdateRemote(){
@@ -101,6 +80,41 @@ yadmFetchRemote(){
   yadm fetch
   yadm pull
   cd -
+}
+
+git(){
+  case "$@" in
+
+    "commit -c")
+      ASDF_NODEJS_VERSION="16.13.2" git cz
+    ;;
+
+    "freak")
+      echo "linking main to master"
+      git symbolic-ref refs/heads/main refs/heads/master
+    ;;
+
+    "clean")
+      git branch --merged | egrep -v "(^\*|main|master)" | xargs git branch -d
+    ;;
+
+    # git delete --olderthan 2022-01-26
+    "delete --olderthan"*)
+        date=$3
+        for item in $(git ls-files); do
+          result=$(git --no-pager log --since "$date" -- $item)
+          if [[ "$result" == "" ]]; then
+            echo $item
+            rm $item
+          fi
+        done
+    ;;
+
+    *)
+      hub "$@"
+    ;;
+
+  esac
 }
 
 # Defaults
