@@ -35,11 +35,11 @@ asdf install yarn 1.22.17
 asdf install python 3.10.5
 asdf install ruby 3.1.2
 
-# If I ever change nodejs above, then I need to install 16.13.2 also and the next line must be uncommented for commitizen to work
+# always install nodejs 16.13.2 all the NPM installs below require it.
 # asdf install nodejs 16.13.2
 
 # NPM
-npm install --global expo-cli commitizen cz-customizable
+ASDF_NODEJS_VERSION="16.13.2" npm install --global expo-cli commitizen cz-customizable
 
 # Copy secrets template if none exist
 if [ ! -f ~/secrets.sh ]; then
