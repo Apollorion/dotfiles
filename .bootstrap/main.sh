@@ -23,7 +23,8 @@ asdf plugin add kubectl
 asdf plugin add terraform
 asdf plugin add nodejs
 asdf plugin add yarn
-asdf plugin-add python
+asdf plugin add python
+asdf plugin add ruby
 
 asdf install awscli 2.4.9
 asdf install golang 1.17.6
@@ -32,6 +33,7 @@ asdf install terraform 1.1.7
 asdf install nodejs 16.13.2
 asdf install yarn 1.22.17
 asdf install python 3.10.5
+asdf install ruby 3.1.2
 
 # If I ever change nodejs above, then I need to install 16.13.2 also and the next line must be uncommented for commitizen to work
 # asdf install nodejs 16.13.2
