@@ -109,6 +109,10 @@ git(){
           fi
         done
     ;;
+    
+    "pull-request -v")
+      gh pr view --web
+    ;;
 
     *)
       hub "$@"
