@@ -52,7 +52,7 @@ source ~/functions.sh
 test -f ~/secrets.sh && source ~/secrets.sh
 export AWS_PAGER=""
 export GOPATH=~/go
-export CDPATH=".:$HOME/updater:$HOME/projects:$HOME/personal"
+export CDPATH=".:$HOME/projects:$HOME/external"
 
 # run after function.sh is loaded
 # make sure I dont have to do this a ton
