@@ -63,7 +63,6 @@ cask "postman"
 cask "sequel-ace"
 cask "spaceman"
 cask "sublime-text"
-cask "todoist"
 cask "1password"
 
 mas "Amphetamine", id: 937984704
