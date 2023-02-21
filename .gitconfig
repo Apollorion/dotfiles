@@ -12,6 +12,7 @@
     pretty = \\%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s'
 [core]
     editor = vim
+	excludesFile = ~/.gitignore
 [merge]
     tool = intellij
 [mergetool "intellij"]
@@ -32,3 +33,5 @@
 [branch]
   autosetupmerge = always
   autosetuprebase = always
+[safe]
+	directory = *
