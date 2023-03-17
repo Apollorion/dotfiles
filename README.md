@@ -6,7 +6,7 @@
 2. Install Yadm `brew install yadm`
 3. Using yadm, clone this repo `yadm clone https://github.com/Apollorion/dotfiles.git`
 4. Install GPG keys off your yubikey `gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0xFAFA8E62C123F240`
-5. Unencrypt encrypted files `yadm decrypt`
+5. Add your public key off your yubikey for SSH (make sure yubikey is plugged in) `ssh-add -L > ~/.ssh/id_rsa_yubikey.pub`
 6. If not asked, run bootstrap `yadm bootstrap`
 
 
