@@ -68,4 +68,4 @@ cask "1password"
 mas "Amphetamine", id: 937984704
 mas "Slack", id: 803453959
 mas "The Unarchiver", id: 425424353
-mas "Xcode", id: 497799835
+#mas "Xcode", id: 497799835
