@@ -1,11 +1,11 @@
 [user]
-	signingkey = 0x1E1A26A027CC4A94
+    signingkey = 0x7D083A8EE8BBF157
     name = apollorion
     email = joey@apollorion.com
 [commit]
     gpgsign = true
 [gpg]
-    program = /usr/local/bin/gpg
+    program = /opt/homebrew/bin/gpg 
 [pull]
     rebase = true
 [format]

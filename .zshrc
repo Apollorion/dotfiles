@@ -1,4 +1,8 @@
 #!/bin/zsh
+# Homebrew Path Mac M1
+export PATH="/opt/homebrew/bin:$PATH"
+# Homebrew Path Intel
+export PATH="/usr/local/sbin:$PATH"
 
 # GPG and SSH config
 export GPG_TTY="$(tty)"
@@ -16,6 +20,7 @@ POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 unset POWERLEVEL9K_KUBECONTEXT_SHOW_ON_COMMAND
+ZSH_THEME="powerlevel10k"
 source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 # Built in config
@@ -24,9 +29,6 @@ DEFAULT_USER=whoami
 # RBENV
 export PATH="$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init -)"
-
-# Homebrew path
-export PATH="/usr/local/sbin:$PATH"
 
 # Application Configuration
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

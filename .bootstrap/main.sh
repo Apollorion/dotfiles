@@ -8,6 +8,11 @@ cd -
 # Install OHMYZSH
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# Install Easy K8s Secrets
+cd ~
+git clone https://github.com/Apollorion/easy-k8s-secrets.git
+cd -
+
 # Set default applications for file types
 duti -s com.sublimetext.4 .md all
 duti -s com.sublimetext.4 .txt all
