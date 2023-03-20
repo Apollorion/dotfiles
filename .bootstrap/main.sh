@@ -40,6 +40,15 @@ asdf install yarn 1.22.17
 asdf install python 3.10.5
 asdf install ruby 3.1.2
 
+asdf global awscli 2.4.9
+asdf global golang 1.17.6
+asdf global kubectl 1.23.1
+asdf global terraform 1.1.7
+asdf global nodejs 16.13.2
+asdf global yarn 1.22.17
+asdf global python 3.10.5
+asdf global ruby 3.1.2
+
 # always install nodejs 16.13.2 all the NPM installs below require it.
 # asdf install nodejs 16.13.2
 

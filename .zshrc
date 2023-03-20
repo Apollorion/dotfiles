@@ -4,6 +4,8 @@ export PATH="/opt/homebrew/bin:$PATH"
 # Homebrew Path Intel
 export PATH="/usr/local/sbin:$PATH"
 
+export BREW_PATH=$(brew --prefix)
+
 # GPG and SSH config
 export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
@@ -32,7 +34,7 @@ eval "$(rbenv init -)"
 
 # Application Configuration
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[[ ! -f /usr/local/opt/asdf/libexec/asdf.sh ]] || . /usr/local/opt/asdf/libexec/asdf.sh
+[[ ! -f $BREW_PATH/opt/asdf/libexec/asdf.sh ]] || . $BREW_PATH/opt/asdf/libexec/asdf.sh
 export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
 export BAT_THEME="Dracula"
 
