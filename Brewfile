@@ -9,7 +9,6 @@ tap "romkatv/powerlevel10k"
 
 brew "ansible"
 brew "asdf"
-brew "awscli"
 brew "bat"
 brew "cmake"
 brew "duti"
