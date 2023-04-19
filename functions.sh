@@ -33,8 +33,14 @@ newTmux(){
 kdebug(){
     name=$(openssl rand -base64 12 | tr -d "=+/" | cut -c1-25 | awk '{print tolower($0)}')
     name="joeystout-$name"
+    serviceAccount=$1
+    shift
+
+    echo "Command"
+    echo "kubectl run $name --rm -i --tty --overrides=\"{ \\\"spec\\\": { \\\"serviceAccount\\\": \\\"$serviceAccount\\\" }  }\" --image digitalocean/doks-debug:latest -- $@"
+
     if [[ "$1" != "" ]]; then
-        kubectl run $name --rm -i --tty --overrides="{ \"spec\": { \"serviceAccount\": \"$1\" }  }" --image digitalocean/doks-debug:latest
+        kubectl run $name --rm -i --tty --overrides="{ \"spec\": { \"serviceAccount\": \"$serviceAccount\" }  }" --image digitalocean/doks-debug:latest -- $@
     else
         kubectl run $name --rm -i --tty --image digitalocean/doks-debug:latest
     fi
