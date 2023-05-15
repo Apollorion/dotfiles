@@ -66,6 +66,7 @@ cask "remarkable"
 cask "sequel-ace"
 cask "spaceman"
 cask "sublime-text"
+cask "vincelwt-chatgpt"
 cask "1password"
 
 mas "Amphetamine", id: 937984704
