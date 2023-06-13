@@ -106,7 +106,7 @@ git(){
     ;;
 
     "clean")
-      git branch --merged | egrep -v "(^\*|main|master)" | xargs git branch -d
+      git branch --merged | grep --color=auto -v "(^\*|main|master)" | xargs git branch -d
     ;;
 
     # git delete --olderthan 2022-01-26
