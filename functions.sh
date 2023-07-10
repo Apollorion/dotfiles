@@ -136,6 +136,10 @@ ksecret(){
   kubectl get secret $1 -o json | jq '.data | map_values(@base64d)'
 }
 
+killDNS(){
+  sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
+}
+
 # Defaults
 export AWS_DEFAULT_REGION="us-east-1"
 export AWS_PROFILE="default"
