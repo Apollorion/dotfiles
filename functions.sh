@@ -140,6 +140,10 @@ killDNS(){
   sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
 }
 
+opItem(){
+  op item get $1 --vault CLI --fields $2
+}
+
 # Defaults
 export AWS_DEFAULT_REGION="us-east-1"
 export AWS_PROFILE="default"

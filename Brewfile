@@ -60,14 +60,13 @@ cask "intellij-idea"
 cask "iterm2"
 cask "karabiner-elements"
 cask "keybase"
-cask "ngrok"
 cask "postman"
 cask "remarkable"
 cask "sequel-ace"
 cask "spaceman"
 cask "sublime-text"
 cask "vincelwt-chatgpt"
-cask "1password"
+cask "1password/tap/1password-cli"
 
 mas "Amphetamine", id: 937984704
 mas "Slack", id: 803453959

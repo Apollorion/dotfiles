@@ -55,11 +55,6 @@ asdf global ruby 3.1.2
 # NPM
 ASDF_NODEJS_VERSION="16.13.2" npm install --global expo-cli commitizen cz-customizable
 
-# Copy secrets template if none exist
-if [ ! -f ~/secrets.sh ]; then
-    cp ~/secret_template.sh ~/secrets.sh
-fi
-
 # OSX defaults
 defaults -currentHost write com.apple.dock tilesize -float 36 # Sets dock size
 defaults -currentHost write com.apple.dock show-recents -bool false # Disable recents in the dock
@@ -70,3 +65,10 @@ defaults -currentHost write -g com.apple.mouse.scaling -float 20.0 # Speed up th
 # GPG Things
 launchctl load gnupg.gpg-agent.plist
 launchctl load gnupg.gpg-agent-symlink.plist
+
+# OnePassword Check
+if [ ! -f ~/OP.sh ]; then
+  echo "export OP_SERVICE_ACCOUNT_TOKEN=\"\"" > ~/OP.sh
+  chmod +x ~/OP.sh
+  echo "JOEY put your onepassword service account token into ~/OP.sh"
+fi

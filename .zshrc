@@ -1,4 +1,7 @@
 #!/bin/zsh
+# Always do this first
+source ~/OP.sh
+
 # Homebrew Path Mac M1
 export PATH="/opt/homebrew/bin:$PATH"
 # Homebrew Path Intel
@@ -54,7 +57,7 @@ source ~/easy-k8s-secrets/k8s_shim.sh
 
 # Personal Stuff
 source ~/functions.sh
-test -f ~/secrets.sh && source ~/secrets.sh
+source ~/secrets.sh
 export AWS_PAGER=""
 export GOPATH=~/go
 export CDPATH=".:$HOME/projects"
