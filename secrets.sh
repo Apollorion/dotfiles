@@ -1,10 +1,10 @@
 #!/bin/zsh
 
 # github token
-export GITHUB_TOKEN=$(opItem "GitHub Personal Access Token" token)
+export GITHUB_TOKEN=$(vault get "GitHub Personal Access Token")
 
 # dockerhub
-export DOCKERHUB_USERNAME=""
-export DOCKERHUB_PASSWSORD=""
+export DOCKERHUB_USERNAME="apollorion"
+export DOCKERHUB_PASSWORD=$(vault get "DockerHub")
 
-export OPENAI_API_KEY=$(opItem "OpenAPI Key" token)
+export OPENAI_API_KEY=$(vault get "OpenAPI Key")

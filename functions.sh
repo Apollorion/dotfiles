@@ -140,8 +140,23 @@ killDNS(){
   sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
 }
 
-opItem(){
-  op item get $1 --vault CLI --fields $2
+vault(){
+  query="$1"
+  title="$2"
+  value="$3"
+
+  if [[ "$query" == "get" ]]; then
+    op item get "$title" --vault CLI --fields data
+  fi
+
+  if [[ "$query" == "set" ]]; then
+  	op item get "$title" --vault CLI --fields data > /dev/null 2>&1
+  	if [ $? -ne 0 ]; then
+  	  op item create --category="API Credential" --title="$title" --vault=CLI data="$value"
+  	else
+  	  op item edit "$title" --vault=CLI data="$value"
+        fi
+  fi
 }
 
 # Defaults
