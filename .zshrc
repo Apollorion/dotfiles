@@ -6,6 +6,8 @@ source ~/OP.sh
 export PATH="/opt/homebrew/bin:$PATH"
 # Homebrew Path Intel
 export PATH="/usr/local/sbin:$PATH"
+# Custom Path
+export PATH="$HOME/bin:$PATH"
 
 export BREW_PATH=$(brew --prefix)
 
@@ -14,19 +16,11 @@ export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 
 # OHMYZSH and POWERLEVEL10K Config
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
 ZSH_DISABLE_COMPFIX=true
 export TERM="xterm-256color"
 export ZSH="/Users/$(whoami)/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
-POWERLINE_BASH_CONTINUATION=1
-POWERLINE_BASH_SELECT=1
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-unset POWERLEVEL9K_KUBECONTEXT_SHOW_ON_COMMAND
-ZSH_THEME="powerlevel10k"
-source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
+eval "$(oh-my-posh init zsh --config /Users/$(whoami)/oh_my_posh.json)"
 
 # Built in config
 DEFAULT_USER=whoami
