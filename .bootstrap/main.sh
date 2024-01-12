@@ -26,6 +26,7 @@ asdf plugin add awscli
 asdf plugin add golang
 asdf plugin add kubectl
 asdf plugin add terraform
+asdf plugin add opentofu
 asdf plugin add nodejs
 asdf plugin add yarn
 asdf plugin add python
@@ -35,6 +36,7 @@ asdf install awscli latest
 asdf install golang 1.17.6
 asdf install kubectl latest
 asdf install terraform latest
+asdf install opentofu latest
 asdf install nodejs 16.13.2
 asdf install yarn 1.22.17
 asdf install python 3.10.5
@@ -44,6 +46,7 @@ asdf global awscli latest
 asdf global golang 1.17.6
 asdf global kubectl latest
 asdf global terraform latest
+asdf global opentofu latest
 asdf global nodejs 16.13.2
 asdf global yarn 1.22.17
 asdf global python 3.10.5

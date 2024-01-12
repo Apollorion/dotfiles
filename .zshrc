@@ -46,6 +46,7 @@ alias ll="ls -lah"
 alias cat="bat --style=plain"
 alias grep="rg"
 alias kunhealthy="kubectl get -o wide pods -A | grep -v \"Completed|1/1|2/2|3/3|4/4|5/5|6/6|7/7\""
+alias sublime="subl"
 
 source ~/easy-k8s-secrets/k8s_shim.sh
 
@@ -56,6 +57,7 @@ export AWS_PAGER=""
 export GOPATH=~/go
 export CDPATH=".:$HOME/projects"
 export BUILDKIT_PROGRESS=plain
+export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 
 # run after function.sh is loaded
 # make sure I dont have to do this a ton

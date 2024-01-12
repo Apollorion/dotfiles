@@ -1,8 +1,9 @@
 nodejs 16.13.2
-awscli 2.13.31
+awscli 2.15.9
 golang 1.17.6
-kubectl 1.28.3
-terraform 1.6.3
+kubectl 1.29.0
+terraform 1.6.6
 yarn 1.22.17
 python 3.10.5
 flux2 0.41.2
+opentofu 1.6.0

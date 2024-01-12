@@ -63,10 +63,23 @@
       "alignment": "right",
       "segments": [
         {
+          "type": "kubectl",
+          "style": "diamond",
+          "leading_diamond": "\ue0b2",
+          "powerline_symbol": "",
+          "foreground": "#000000",
+          "background": "#ebcc34",
+          "template": " ﴱ {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} ",
+          "properties": {
+            "context_aliases": {
+              "arn:aws:eks:us-east-2:833241423620:cluster/joey": "joeys effectual cluster"
+            }
+          }
+        },
+        {
           "background": "#f1fa8c",
           "foreground": "#282a36",
           "invert_powerline": true,
-          "leading_diamond": "\ue0b2",
           "style": "diamond",
           "template": " \ue7ad {{.Profile}}{{if .Region}}@{{.Region}}{{end}}",
           "trailing_diamond": "\ue0b4",
