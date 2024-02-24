@@ -63,4 +63,6 @@ export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 # make sure I dont have to do this a ton
 gpgfix > /dev/null 2>&1
 
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 source <(kubectl completion zsh)
