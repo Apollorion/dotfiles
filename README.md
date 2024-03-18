@@ -10,6 +10,10 @@
 6. If not asked, run bootstrap `yadm bootstrap`
 
 
+## Updating GPG Keys after expiration
+See [updating_keys.md](keys/updating_keys.md) in the keys directory.
+
+
 ## Notes
 
 If you have trouble with SSH/GPG, try the following:
