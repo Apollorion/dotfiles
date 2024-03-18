@@ -13,7 +13,7 @@ https://github.com/drduh/YubiKey-Guide/tree/0bccb363c205baa519e6f5a042060368afe6
   - `cd ~/Desktop/NEW`
   - `export GNUPGHOME=$(PWD)`
 5. export private key id as KEYID:
-  - export KEYID="0xFAFA8E62C123F240" (this never changes)
+  - `export KEYID="0xFAFA8E62C123F240"` (this never changes)
 6. Edit the gpg key
   - `gpg --edit-key $KEYID`
 7. Select all the subkeys by typing:
