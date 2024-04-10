@@ -1,6 +1,5 @@
 tap "fluxcd/tap"
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "jwbargsten/misc"
@@ -70,6 +69,7 @@ cask "spaceman"
 cask "sublime-text"
 cask "vincelwt-chatgpt"
 cask "1password/tap/1password-cli"
+cask "1password"
 
 mas "Amphetamine", id: 937984704
 mas "Slack", id: 803453959
