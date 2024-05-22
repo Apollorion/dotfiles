@@ -54,7 +54,7 @@ source ~/easy-k8s-secrets/k8s_shim.sh
 source ~/functions.sh
 source ~/secrets.sh
 export AWS_PAGER=""
-export GOPATH=~/go
+export GOPATH=~/projects
 export CDPATH=".:$HOME/projects"
 export BUILDKIT_PROGRESS=plain
 export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"

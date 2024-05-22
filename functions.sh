@@ -167,5 +167,5 @@ exitKubie(){
 }
 
 # Defaults
-export AWS_DEFAULT_REGION="us-gov-west-1"
+export AWS_DEFAULT_REGION="us-east-2"
 export AWS_PROFILE="default"
