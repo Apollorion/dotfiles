@@ -69,6 +69,9 @@ defaults -currentHost write -g com.apple.mouse.scaling -float 20.0 # Speed up th
 launchctl load gnupg.gpg-agent.plist
 launchctl load gnupg.gpg-agent-symlink.plist
 
+# Install help command
+gh extension install github/gh-copilot
+
 # OnePassword Check
 if [ ! -f ~/OP.sh ]; then
   echo "export OP_SERVICE_ACCOUNT_TOKEN=\"\"" > ~/OP.sh

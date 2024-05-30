@@ -125,6 +125,10 @@ git(){
       gh pr view --web
     ;;
 
+    "checkout")
+       git checkout $(git branch -a | grep -ve "\*" -ve "->"  | sed 's/remotes\/origin\///' | awk '!seen[$0]++' | fzf)
+    ;;
+
     *)
       hub "$@"
     ;;
@@ -164,6 +168,15 @@ exitKubie(){
     echo "Exiting Kubie Shell"
     exit
   fi
+}
+
+help(){
+  # Copilot cli doesnt like github personal access tokens
+  export BACKUP_GITHUB_TOKEN=$GITHUB_TOKEN
+  unset GITHUB_TOKEN
+  gh copilot suggest $1
+  export GITHUB_TOKEN=$BACKUP_GITHUB_TOKEN
+  unset BACKUP_GITHUB_TOKEN
 }
 
 # Defaults
