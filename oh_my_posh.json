@@ -5,22 +5,13 @@
       "alignment": "left",
       "segments": [
         {
-          "background": "#6272a4",
-          "foreground": "#f8f8f2",
-          "leading_diamond": "\ue0b6",
-          "style": "diamond",
-          "template": "{{ .UserName }} ",
-          "type": "session"
-        },
-        {
           "background": "#bd93f9",
           "foreground": "#f8f8f2",
           "powerline_symbol": "\ue0b0",
           "properties": {
-            "style": "folder"
+            "style": "agnoster_full"
           },
-          "style": "powerline",
-          "template": " {{ .Path }} ",
+          "style": "diamond",
           "type": "path"
         },
         {
