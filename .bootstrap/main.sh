@@ -20,6 +20,7 @@ duti -s com.sublimetext.4 .yaml all
 duti -s com.sublimetext.4 .yml all
 duti -s com.sublimetext.4 .sh all
 duti -s com.sublimetext.4 .js all
+duti -s com.sublimetext.4 .config all
 
 # Install / configure asdf plugins
 asdf plugin add awscli

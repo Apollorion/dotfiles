@@ -1,0 +1,6 @@
+provider_installation {
+  dev_overrides {
+    "spacelift.io/Apollorion/edgecases" = "/Users/apollorion/projects/bin"
+  }
+  direct {}
+}
