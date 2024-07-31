@@ -64,7 +64,7 @@ defaults -currentHost write com.apple.dock tilesize -float 36 # Sets dock size
 defaults -currentHost write com.apple.dock show-recents -bool false # Disable recents in the dock
 defaults -currentHost write com.apple.AppleMultitouchTrackpad TrackpadCornerSecondaryClick -int 2 # Right click with bottom right corner of trackpad
 defaults -currentHost write -g com.apple.swipescrolldirection -bool false # Disable natural scroll direction
-defaults -currentHost write -g com.apple.mouse.scaling -float 20.0 # Speed up the mouse
+defaults -currentHost write -g com.apple.mouse.scaling -float "3.0" # Speed up the mouse
 
 # GPG Things
 launchctl load gnupg.gpg-agent.plist
