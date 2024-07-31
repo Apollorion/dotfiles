@@ -3,3 +3,4 @@
 **/.idea/*
 **/*.iml
 **/GIT_IGNORE**
+**/.terraform/*
