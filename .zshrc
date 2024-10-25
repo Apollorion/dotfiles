@@ -58,6 +58,8 @@ export GOPATH=~/projects
 export CDPATH=".:$HOME/projects"
 export BUILDKIT_PROGRESS=plain
 export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
+export POETRY_VIRTUALENVS_PREFER_ACTIVE_PYTHON=true
+
 
 # run after function.sh is loaded
 # make sure I dont have to do this a ton

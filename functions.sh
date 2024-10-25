@@ -150,11 +150,11 @@ vault(){
   value="$3"
 
   if [[ "$query" == "get" ]]; then
-    op item get "$title" --vault CLI --fields data
+    op item get "$title" --vault CLI --fields data --reveal
   fi
 
   if [[ "$query" == "set" ]]; then
-  	op item get "$title" --vault CLI --fields data > /dev/null 2>&1
+  	op item get "$title" --vault CLI --fields data --reveal > /dev/null 2>&1
   	if [ $? -ne 0 ]; then
   	  op item create --category="API Credential" --title="$title" --vault=CLI data="$value"
   	else
