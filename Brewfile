@@ -1,7 +1,5 @@
 tap "alexnabokikh/tfsort"
 tap "fluxcd/tap"
-tap "homebrew/bundle"
-tap "homebrew/services"
 tap "jwbargsten/misc"
 tap "norwoodj/tap"
 tap "romkatv/powerlevel10k"
@@ -54,6 +52,9 @@ cask "arc"
 cask "alfred"
 cask "discord"
 cask "docker"
+cask "elgato-camera-hub"
+cask "elgato-stream-deck"
+cask "elgato-wave-link"
 cask "firefox"
 cask "google-chrome"
 cask "google-cloud-sdk"
@@ -62,6 +63,9 @@ cask "intellij-idea"
 cask "iterm2"
 cask "karabiner-elements"
 cask "keybase"
+cask "moom"
+cask "mutedeck"
+cask "obs"
 cask "obsidian"
 cask "session-manager-plugin"
 cask "sequel-ace"
@@ -70,8 +74,10 @@ cask "synology-drive"
 cask "chatgpt"
 cask "1password/tap/1password-cli"
 cask "1password"
+cask "zoom"
 
 mas "Amphetamine", id: 937984704
 mas "Slack", id: 803453959
 mas "The Unarchiver", id: 425424353
 mas "In Your Face: Meeting Reminder", id: 1476964367
+mas "Next Meeting", id: 1017470484
