@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Custom Controls (4001)</key>
+	<array>
+		<dict>
+			<key>Action</key>
+			<integer>1001</integer>
+			<key>Apply to Overlapping Windows</key>
+			<true/>
+			<key>Auto-Trigger</key>
+			<false/>
+			<key>Auto-Trigger Display Count</key>
+			<integer>1</integer>
+			<key>Generic</key>
+			<false/>
+			<key>Identifier</key>
+			<string>E7B4675C-AA88-4237-93BA-13C70781A700</string>
+			<key>Snapshot</key>
+			<array>
+				<dict>
+					<key>Application Name</key>
+					<string>Camera Hub</string>
+					<key>Available Screen Frame</key>
+					<string>{{0, 1080}, {2560, 1055}}</string>
+					<key>Bundle Identifier</key>
+					<string>com.elgato.camerahub</string>
+					<key>Screen Frame</key>
+					<string>{{0, 1080}, {2560, 1080}}</string>
+					<key>Window Frame</key>
+					<string>{{2, 1080}, {981, 568}}</string>
+					<key>Window Subrole</key>
+					<string>AXStandardWindow</string>
+					<key>Window Title</key>
+					<string>Camera Hub</string>
+				</dict>
+				<dict>
+					<key>Application Name</key>
+					<string>zoom.us</string>
+					<key>Available Screen Frame</key>
+					<string>{{0, 54}, {2560, 1001}}</string>
+					<key>Bundle Identifier</key>
+					<string>us.zoom.xos</string>
+					<key>Screen Frame</key>
+					<string>{{0, 0}, {2560, 1080}}</string>
+					<key>Window Frame</key>
+					<string>{{0, 54}, {2560, 1001}}</string>
+					<key>Window Subrole</key>
+					<string>AXStandardWindow</string>
+					<key>Window Title</key>
+					<string>Zoom Meeting</string>
+				</dict>
+				<dict>
+					<key>Application Name</key>
+					<string>OBS Studio</string>
+					<key>Available Screen Frame</key>
+					<string>{{0, 1080}, {2560, 1055}}</string>
+					<key>Bundle Identifier</key>
+					<string>com.obsproject.obs-studio</string>
+					<key>Screen Frame</key>
+					<string>{{0, 1080}, {2560, 1080}}</string>
+					<key>Window Frame</key>
+					<string>{{1, 1586}, {983, 549}}</string>
+					<key>Window Subrole</key>
+					<string>AXStandardWindow</string>
+					<key>Window Title</key>
+					<string>OBS 31.0.1 - Profile: Work - Scenes: Untitled</string>
+				</dict>
+			</array>
+			<key>Snapshot Screens</key>
+			<array>
+				<string>{{0, 0}, {2560, 1080}}</string>
+				<string>{{0, 1080}, {2560, 1080}}</string>
+			</array>
+			<key>Stubborn</key>
+			<false/>
+			<key>Title</key>
+			<string>Regular Call</string>
+		</dict>
+	</array>
+</dict>
+</plist>
