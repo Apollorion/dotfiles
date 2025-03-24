@@ -4,3 +4,4 @@
 **/*.iml
 **/GIT_IGNORE**
 **/.terraform/*
+**/__pycache__/*

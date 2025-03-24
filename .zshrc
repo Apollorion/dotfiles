@@ -68,3 +68,8 @@ gpgfix > /dev/null 2>&1
 source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
 source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 source <(kubectl completion zsh)
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/apollorion/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions

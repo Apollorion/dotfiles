@@ -1,12 +1,13 @@
 nodejs 20.9.0
 awscli 2.17.20
-golang 1.21.3
+golang 1.23.3
 kubectl 1.30.3
 terraform 1.9.3
 yarn 1.22.17
-python 3.10.5
+python 3.13.1
 flux2 0.41.2
-opentofu 1.8.0
+opentofu 1.8.1
 ruby 3.1.2
 mockery 2.36.0
 terragrunt 0.66.3
+poetry 2.0.1
