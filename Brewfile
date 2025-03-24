@@ -45,11 +45,12 @@ brew "yarn"
 brew "ykman"
 brew "yubikey-personalization"
 brew "zsh-syntax-highlighting"
+brew "oh-my-posh"
 
 brew "fluxcd/tap/flux"
 brew "norwoodj/tap/helm-docs"
-brew "jandedobbeleer/oh-my-posh/oh-my-posh"
 
+cask "arc"
 cask "alfred"
 cask "camo-studio"
 cask "discord"
