@@ -43,15 +43,15 @@ asdf install yarn 1.22.17
 asdf install python 3.10.5
 asdf install ruby 3.1.2
 
-asdf global awscli latest
-asdf global golang 1.17.6
-asdf global kubectl latest
-asdf global terraform latest
-asdf global opentofu latest
-asdf global nodejs 16.13.2
-asdf global yarn 1.22.17
-asdf global python 3.10.5
-asdf global ruby 3.1.2
+asdf set --home awscli latest
+asdf set --home golang 1.17.6
+asdf set --home kubectl latest
+asdf set --home terraform latest
+asdf set --home opentofu latest
+asdf set --home nodejs 16.13.2
+asdf set --home yarn 1.22.17
+asdf set --home python 3.10.5
+asdf set --home ruby 3.1.2
 
 # always install nodejs 16.13.2 all the NPM installs below require it.
 # asdf install nodejs 16.13.2
@@ -67,8 +67,8 @@ defaults -currentHost write -g com.apple.swipescrolldirection -bool false # Disa
 defaults -currentHost write -g com.apple.mouse.scaling -float "3.0" # Speed up the mouse
 
 # GPG Things
-launchctl load gnupg.gpg-agent.plist
-launchctl load gnupg.gpg-agent-symlink.plist
+#launchctl load gnupg.gpg-agent.plist
+#launchctl load gnupg.gpg-agent-symlink.plist
 
 # Install help command
 gh extension install github/gh-copilot
