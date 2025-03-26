@@ -32,6 +32,7 @@ asdf plugin add nodejs
 asdf plugin add yarn
 asdf plugin add python
 asdf plugin add ruby
+asdf plugin add golangci-lint https://github.com/hypnoglow/asdf-golangci-lint.git
 
 asdf install awscli latest
 asdf install golang 1.17.6
@@ -42,6 +43,7 @@ asdf install nodejs 16.13.2
 asdf install yarn 1.22.17
 asdf install python 3.10.5
 asdf install ruby 3.1.2
+asdf install golangci-lint 1.64.8
 
 asdf set --home awscli latest
 asdf set --home golang 1.17.6
@@ -52,6 +54,7 @@ asdf set --home nodejs 16.13.2
 asdf set --home yarn 1.22.17
 asdf set --home python 3.10.5
 asdf set --home ruby 3.1.2
+asdf set --home golangci-lint 1.64.8
 
 # always install nodejs 16.13.2 all the NPM installs below require it.
 # asdf install nodejs 16.13.2

@@ -8,6 +8,8 @@
     program = /opt/homebrew/bin/gpg 
 [pull]
     rebase = true
+[rebase]
+  autosquash = true
 [format]
     pretty = \\%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s'
 [core]
@@ -35,3 +37,5 @@
   autosetuprebase = always
 [safe]
 	directory = *
+[alias]
+  fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
