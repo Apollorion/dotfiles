@@ -5,3 +5,4 @@
 **/GIT_IGNORE**
 **/.terraform/*
 **/__pycache__/*
+**/.tool-versions
