@@ -1,4 +1,4 @@
-nodejs 16.13.2
+nodejs lts
 awscli 2.25.2
 golang 1.17.6
 kubectl 1.32.3

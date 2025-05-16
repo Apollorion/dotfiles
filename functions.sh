@@ -183,6 +183,10 @@ fixGo(){
   golangci-lint run --fix
 }
 
+changeVideo(){
+  curl http://digitalwindow.stout.zone:3000/change
+}
+
 # Defaults
 export AWS_DEFAULT_REGION="us-east-2"
 export AWS_PROFILE="default"

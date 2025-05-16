@@ -39,7 +39,7 @@ asdf install golang 1.17.6
 asdf install kubectl latest
 asdf install terraform latest
 asdf install opentofu latest
-asdf install nodejs 16.13.2
+asdf install nodejs lts
 asdf install yarn 1.22.17
 asdf install python 3.10.5
 asdf install ruby 3.1.2
@@ -50,17 +50,13 @@ asdf set --home golang 1.17.6
 asdf set --home kubectl latest
 asdf set --home terraform latest
 asdf set --home opentofu latest
-asdf set --home nodejs 16.13.2
+asdf set --home nodejs lts
 asdf set --home yarn 1.22.17
 asdf set --home python 3.10.5
 asdf set --home ruby 3.1.2
 asdf set --home golangci-lint 1.64.8
 
-# always install nodejs 16.13.2 all the NPM installs below require it.
-# asdf install nodejs 16.13.2
-
-# NPM
-ASDF_NODEJS_VERSION="16.13.2" npm install --global expo-cli commitizen cz-customizable
+npm install --global expo-cli commitizen cz-customizable
 
 # OSX defaults
 defaults -currentHost write com.apple.dock tilesize -float 36 # Sets dock size
