@@ -22,49 +22,65 @@ return {
   -- { import = "nvchad.blink.lazyspec" },
 
   {
-  	"nvim-treesitter/nvim-treesitter",
-  	opts = {
-  		ensure_installed = {
-  			"vim", "lua", "vimdoc",
-       "html", "css", "terraform",
-  		},
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
+        "lua",
+        "vimdoc",
+        "html",
+        "css",
+        "terraform",
+      },
       highlight = {
-  			enable = true,
-  			additional_vim_regex_highlighting = false,
-  		},
-  	},
+        enable = true,
+        additional_vim_regex_highlighting = false,
+      },
+    },
   },
 
   {
     "RRethy/vim-illuminate",
     event = "VeryLazy",
     config = function()
-      require('illuminate').configure({
+      require("illuminate").configure {
         providers = {
-          'lsp',
-          'treesitter',
-          'regex',
+          "lsp",
+          "treesitter",
+          "regex",
         },
         delay = 100,
         filetype_overrides = {},
         filetypes_denylist = {
-          'dirvish',
-          'fugitive',
-          'alpha',
-          'NvimTree',
-          'lazy',
-          'neogitstatus',
-          'Trouble',
-          'lir',
-          'Outline',
-          'spectre_panel',
-          'toggleterm',
-          'DressingSelect',
-          'TelescopePrompt',
+          "dirvish",
+          "fugitive",
+          "alpha",
+          "NvimTree",
+          "lazy",
+          "neogitstatus",
+          "Trouble",
+          "lir",
+          "Outline",
+          "spectre_panel",
+          "toggleterm",
+          "DressingSelect",
+          "TelescopePrompt",
         },
         under_cursor = true,
-      })
+      }
     end,
   },
 
+  {
+    "rmagatti/auto-session",
+    lazy = false,
+
+    ---enables autocomplete for opts
+    ---@module "auto-session"
+    ---@type AutoSession.Config
+    opts = {
+      suppressed_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
+      -- log_level = 'debug',
+    },
+  },
 }

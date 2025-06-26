@@ -1,12 +1,44 @@
-vim.opt.number = true         -- Show absolute line numbers
+-- vim.opt.number = true         -- Show absolute line numbers
 vim.opt.relativenumber = true -- Also show relative numbers
 
 vim.api.nvim_create_user_command("Tree", function()
   vim.cmd("NvimTreeToggle")
 end, {})
 
-vim.api.nvim_create_user_command("Terminal", function()
-  vim.cmd("split")
-  vim.cmd("terminal")
-end, {})
+vim.g.copilot_no_tab_map = true
+vim.keymap.set('i', 'gha', 'copilot#Accept("\\<CR>")', { expr = true, replace_keycodes = false })
+vim.keymap.set('i', 'ghp', 'copilot#Previous()', { expr = true, replace_keycodes = false })
+vim.keymap.set('i', 'ghn', 'copilot#Next()', { expr = true, replace_keycodes = false })
+vim.keymap.set('i', 'ghd', 'copilot#Dismiss()', { expr = true, replace_keycodes = false })
 
+
+-- Delete operations go to black hole register (don't go to clipboard)
+vim.keymap.set('n', 'd', '"_d', { noremap = true })
+vim.keymap.set('n', 'D', '"_D', { noremap = true })
+vim.keymap.set('n', 'dd', '"_dd', { noremap = true })
+vim.keymap.set('v', 'd', '"_d', { noremap = true })
+
+-- Change operations go to black hole register (don't go to clipboard)
+vim.keymap.set('n', 'c', '"_c', { noremap = true })
+vim.keymap.set('n', 'C', '"_C', { noremap = true })
+vim.keymap.set('n', 'cc', '"_cc', { noremap = true })
+vim.keymap.set('v', 'c', '"_c', { noremap = true })
+
+require('telescope').setup({
+  defaults = {
+    mappings = {
+      i = {
+        ["<CR>"] = function(...)
+          require('telescope.actions').select_default(...)
+          require('telescope.actions').close(...)
+        end,
+      },
+      n = {
+        ["<CR>"] = function(...)
+          require('telescope.actions').select_default(...)
+          require('telescope.actions').close(...)
+        end,
+      }
+    }
+  }
+})

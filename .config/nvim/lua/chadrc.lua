@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-	theme = "onedark",
+	theme = "chadracula",
 
 	-- hl_override = {
 	-- 	Comment = { italic = true },
@@ -20,6 +20,17 @@ M.nvdash = { load_on_startup = true }
 --          lazyload = false
 --      }
 --}
+
+M.ui = {
+  statusline = {
+    modules = {
+      file = function()
+        local path = vim.fn.expand("%:.")
+        return path == "" and "%#St_file_white#Empty" or "%#St_file_white# " .. path .. " "
+      end,
+    },
+  },
+}
 
 -- Load custom configuration
 require("custom.init")
