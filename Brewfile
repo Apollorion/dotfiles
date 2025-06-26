@@ -29,6 +29,7 @@ brew "kubectx"
 brew "kubie"
 brew "kustomize"
 brew "mas"
+brew "neovim"
 brew "languagetool"
 brew "openssh"
 brew "pinentry-mac"
@@ -90,3 +91,4 @@ mas "Slack", id: 803453959
 mas "The Unarchiver", id: 425424353
 mas "In Your Face: Meeting Reminder", id: 1476964367
 mas "Next Meeting", id: 1017470484
+mas "WireGuard", id: 1451685025

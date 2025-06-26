@@ -1,6 +1,6 @@
 nodejs lts
 awscli 2.25.2
-golang 1.17.6
+golang 1.23.0
 kubectl 1.32.3
 terraform 1.11.2
 yarn 1.22.17
@@ -12,3 +12,4 @@ mockery 2.36.0
 terragrunt 0.66.3
 poetry 2.0.1
 golangci-lint 1.64.8
+go 1.23

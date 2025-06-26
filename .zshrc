@@ -50,6 +50,7 @@ alias grep="rg"
 alias kunhealthy="kubectl get -o wide pods -A | grep -v \"Completed|1/1|2/2|3/3|4/4|5/5|6/6|7/7\""
 alias sublime="subl"
 alias k="kubectl"
+alias vim="nvim"
 
 # Personal Stuff
 source ~/functions.sh

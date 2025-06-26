@@ -171,12 +171,7 @@ exitKubie(){
 }
 
 help(){
-  # Copilot cli doesnt like github personal access tokens
-  export BACKUP_GITHUB_TOKEN=$GITHUB_TOKEN
-  unset GITHUB_TOKEN
-  gh copilot suggest $1
-  export GITHUB_TOKEN=$BACKUP_GITHUB_TOKEN
-  unset BACKUP_GITHUB_TOKEN
+  claude -p "$1"
 }
 
 fixGo(){
@@ -185,6 +180,14 @@ fixGo(){
 
 changeVideo(){
   curl http://digitalwindow.stout.zone:3000/change
+}
+
+setVideo(){
+  curl -H "youtube-url:$1" http://digitalwindow.stout.zone:3000/set_video_id
+}
+
+idea(){
+  open -na "IntelliJ IDEA.app" --args "$@"
 }
 
 # Defaults
