@@ -24,21 +24,14 @@ vim.keymap.set('n', 'C', '"_C', { noremap = true })
 vim.keymap.set('n', 'cc', '"_cc', { noremap = true })
 vim.keymap.set('v', 'c', '"_c', { noremap = true })
 
-require('telescope').setup({
-  defaults = {
-    mappings = {
-      i = {
-        ["<CR>"] = function(...)
-          require('telescope.actions').select_default(...)
-          require('telescope.actions').close(...)
-        end,
-      },
-      n = {
-        ["<CR>"] = function(...)
-          require('telescope.actions').select_default(...)
-          require('telescope.actions').close(...)
-        end,
-      }
-    }
-  }
-})
+vim.keymap.set('n', '<leader>[', '<C-o>', { desc = 'Jump back' })
+vim.keymap.set('n', '<leader>]', '<C-i>', { desc = 'Jump forward' })
+
+-- Configure which-key for better help display
+local wk_ok, wk = pcall(require, "which-key")
+if wk_ok then
+  wk.register({
+    ["["] = { "<C-o>", "󰁍 Jump back in jump list" },
+    ["]"] = { "<C-i>", "󰁔 Jump forward in jump list" },
+  }, { prefix = "<leader>" })
+end
