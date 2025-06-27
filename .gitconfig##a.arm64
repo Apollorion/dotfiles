@@ -16,12 +16,12 @@
     editor = vim
 	excludesFile = ~/.gitignore
 [merge]
-    tool = intellij
+	tool = diffview
 [mergetool "intellij"]
     cmd = /Applications/IntelliJ\\ IDEA.app/Contents/MacOS/idea merge $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") $(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") $(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
     trustExitCode = true
 [diff]
-    tool = intellij
+	tool = diffview
 [difftool "intellij"]
     cmd = /Applications/IntelliJ\\ IDEA.app/Contents/MacOS/idea diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
 
@@ -41,3 +41,12 @@
   fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
 [url "ssh://git@github.com/"]
     insteadOf = https://github.com/
+[mergetool "diffview"]
+	cmd = nvim -c \"DiffviewOpen\" \"$MERGED\"
+	trustExitCode = true
+[mergetool]
+	keepBackup = false
+[difftool "diffview"]
+	cmd = nvim -c \"DiffviewOpen\" \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
