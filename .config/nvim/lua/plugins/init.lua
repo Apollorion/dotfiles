@@ -1,11 +1,9 @@
 return {
   {
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
     opts = require "configs.conform",
   },
 
-  -- These are some examples, uncomment them if you want to see them work!
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -18,9 +16,6 @@ return {
     lazy = false,
   },
 
-  -- test new blink
-  -- { import = "nvchad.blink.lazyspec" },
-
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
@@ -31,6 +26,7 @@ return {
         "html",
         "css",
         "terraform",
+        "go",
       },
       highlight = {
         enable = true,
@@ -39,48 +35,11 @@ return {
     },
   },
 
-  -- {
-  --   "RRethy/vim-illuminate",
-  --   event = "VeryLazy",
-  --   config = function()
-  --     require("illuminate").configure {
-  --       providers = {
-  --         "lsp",
-  --         "treesitter",
-  --         "regex",
-  --       },
-  --       delay = 100,
-  --       filetype_overrides = {},
-  --       filetypes_denylist = {
-  --         "dirvish",
-  --         "fugitive",
-  --         "alpha",
-  --         "NvimTree",
-  --         "lazy",
-  --         "neogitstatus",
-  --         "Trouble",
-  --         "lir",
-  --         "Outline",
-  --         "spectre_panel",
-  --         "toggleterm",
-  --         "DressingSelect",
-  --         "TelescopePrompt",
-  --       },
-  --       under_cursor = true,
-  --     }
-  --   end,
-  -- },
-
   {
     "rmagatti/auto-session",
     lazy = false,
-
-    ---enables autocomplete for opts
-    ---@module "auto-session"
-    ---@type AutoSession.Config
     opts = {
       suppressed_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
-      -- log_level = 'debug',
     },
   },
 
@@ -101,18 +60,6 @@ return {
       }
     end,
   },
-
-  -- {
-  --   "ray-x/navigator.lua",
-  --   dependencies = {
-  --     { "ray-x/guihua.lua", run = "cd lua/fzy && make" },
-  --     { "neovim/nvim-lspconfig" },
-  --   },
-  --   event = "LspAttach",
-  --   config = function()
-  --     require("navigator").setup()
-  --   end,
-  -- },
 
   {
     "ray-x/navigator.lua",
@@ -163,7 +110,6 @@ return {
         opts = { lsp = { auto_attach = true } },
       },
     },
-    -- your lsp config or other stuff
   },
 
   -- Three-way merge and conflict resolution
@@ -220,4 +166,5 @@ return {
   {
     "tpope/vim-fugitive",
   },
+
 }
