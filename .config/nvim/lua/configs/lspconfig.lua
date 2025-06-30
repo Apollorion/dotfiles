@@ -1,7 +1,7 @@
 require("nvchad.configs.lspconfig").defaults()
 
 vim.lsp.config['tofu'] = {
-  cmd = { 'tofu-ls-wrapper' },
+  cmd = { 'tofu-ls', 'serve' },
   filetypes = { 'terraform' },
   get_language_id = function(_, _)
     return 'opentofu'
