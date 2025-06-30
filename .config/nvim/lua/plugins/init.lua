@@ -199,4 +199,12 @@ return {
   {
     "tpope/vim-fugitive",
   },
+
+  {
+    "jonarrien/telescope-cmdline.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim" },
+    config = function()
+      require("telescope").load_extension "cmdline"
+    end,
+  },
 }

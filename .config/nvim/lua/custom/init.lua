@@ -16,6 +16,8 @@ vim.keymap.set("n", "bp", ":BufferPick<CR>", { noremap = true, silent = true, de
 vim.keymap.set("n", "<leader>[", "<C-o>", { desc = "Jump back" })
 vim.keymap.set("n", "<leader>]", "<C-i>", { desc = "Jump forward" })
 
+vim.keymap.set("n", "<leader><leader>", ":Telescope cmdline<CR>", { noremap = true, desc = "Cmdline with fuzzy search" })
+
 -- Configure which-key for better help display
 local wk_ok, wk = pcall(require, "which-key")
 if wk_ok then
