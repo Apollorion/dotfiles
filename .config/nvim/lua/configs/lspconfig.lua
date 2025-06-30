@@ -1,12 +1,12 @@
 require("nvchad.configs.lspconfig").defaults()
 
-vim.lsp.config['tofu'] = {
-  cmd = { 'tofu-ls', 'serve' },
-  filetypes = { 'terraform' },
+vim.lsp.config["tofu"] = {
+  cmd = { "tofu-ls", "serve" },
+  filetypes = { "terraform" },
   get_language_id = function(_, _)
-    return 'opentofu'
+    return "opentofu"
   end,
-  root_markers = { '.terraform', '.git' }
+  root_markers = { ".terraform", ".git" },
 }
 
 local servers = { "tofu", "gopls" }

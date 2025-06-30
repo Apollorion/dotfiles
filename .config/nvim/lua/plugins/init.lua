@@ -1,3 +1,12 @@
+local ignoreCodeActions = {
+  ["source.doc"] = true,
+  ["source.freesymbols"] = true,
+  ["source.addTest"] = true,
+  ["source.assembly"] = true,
+  ["gopls.doc.features"] = true,
+  ["source.toggleCompilerOptDetails"] = true,
+}
+
 return {
   {
     "stevearc/conform.nvim",
@@ -43,7 +52,20 @@ return {
     },
   },
 
-  { "kosayoda/nvim-lightbulb" },
+  {
+    "kosayoda/nvim-lightbulb",
+    config = function()
+      require("nvim-lightbulb").setup {
+        autocmd = { enabled = true },
+        filter = function(client, ca)
+          if client ~= "gopls" then
+            return true
+          end
+          return not ignoreCodeActions[ca.kind]
+        end,
+      }
+    end,
+  },
 
   { "lewis6991/gitsigns.nvim" },
 
@@ -73,7 +95,18 @@ return {
       require("navigator").setup {
         debug = false, -- Enable debug mode
         lsp = {
-          disable_lsp = false,
+          terraformls = { filetype = {} },
+          code_action = {
+            enable = true,
+            prompt = { virtual_text = true },
+            view = "split",
+            filter = function(client, ca)
+              if client ~= "gopls" then
+                return true
+              end
+              return not ignoreCodeActions[ca.kind]
+            end,
+          },
         },
       }
     end,
@@ -166,5 +199,4 @@ return {
   {
     "tpope/vim-fugitive",
   },
-
 }

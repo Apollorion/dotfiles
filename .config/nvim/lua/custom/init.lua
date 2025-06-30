@@ -29,9 +29,7 @@ require("nvim-lightbulb").setup {
   autocmd = { enabled = true },
 }
 
-require("gitsigns").setup {
-  current_line_blame = true,
-}
+require("gitsigns").setup {}
 
 -- Ensure navigator keymaps are always set after LSP attach
 vim.api.nvim_create_autocmd("LspAttach", {
