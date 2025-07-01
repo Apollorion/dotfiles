@@ -1,0 +1,27 @@
+#!/bin/zsh
+
+export PATH="/opt/homebrew/share/google-cloud-sdk/bin:/Applications/Sublime Text.app/Contents/SharedSupport/bin:/Users/joeystout/.asdf/shims:/opt/homebrew/opt/asdf/libexec/bin:/Users/joeystout/.rbenv/shims:/Users/joeystout/.rbenv/shims:/Users/joeystout/projects/bin:/Users/joeystout/bin:/usr/local/sbin:/opt/homebrew/bin:/opt/homebrew/share/google-cloud-sdk/bin:/Applications/Sublime Text.app/Contents/SharedSupport/bin:/Users/joeystout/.rbenv/shims:/Users/joeystout/.rbenv/shims:/Users/joeystout/projects/bin:/Users/joeystout/bin:/usr/local/sbin:/opt/homebrew/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Applications/iTerm.app/Contents/Resources/utilities:/usr/local/opt/fzf/bin"
+
+vault(){
+  query="$1"
+  title="$2"
+  value="$3"
+
+  if [[ "$query" == "get" ]]; then
+    op item get "$title" --vault CLI --fields data --reveal
+  fi
+
+  if [[ "$query" == "set" ]]; then
+    op item get "$title" --vault CLI --fields data --reveal > /dev/null 2>&1
+    if [ $? -ne 0 ]; then
+      op item create --category="API Credential" --title="$title" --vault=CLI data="$value"
+    else
+      op item edit "$title" --vault=CLI data="$value"
+        fi
+  fi
+}
+
+source ~/OP.sh
+source ~/secrets.sh
+
+eval "${@}"

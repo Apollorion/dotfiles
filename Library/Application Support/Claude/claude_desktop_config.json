@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "toolbox": {
+      "command": "/Users/joeystout/bin/mcp-wrapper",
+      "args": [
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@smithery/toolbox",
+        "--key",
+        "${SMITHERY_API_KEY}",
+        "--profile",
+        "afraid-kangaroo-qH5jc8"
+      ] 
+    }
+  }
+}
