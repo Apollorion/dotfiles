@@ -59,6 +59,7 @@ brew "norwoodj/tap/helm-docs"
 
 cask "arc"
 cask "alfred"
+cask "claude"
 cask "discord"
 cask "docker"
 cask "elgato-camera-hub"

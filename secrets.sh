@@ -10,3 +10,5 @@ export DOCKERHUB_PASSWORD=$(vault get "DockerHub")
 export OPENAI_API_KEY=$(vault get "OpenAPI Key")
 
 export CLOUDFLARE_API_TOKEN=$(vault get "Cloudflare API Key")
+
+export SMITHERY_API_KEY=$(vault get "Smithery API Key")
